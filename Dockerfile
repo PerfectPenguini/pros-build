@@ -15,7 +15,7 @@ RUN apt-get -y install python3-pip
 
 # Install pros
 RUN echo "Downloading PROS SDK"
-RUN python3 -m pip install pros-cli
+RUN python3 -m pip install --user pros-cli
 
 # Build Project
 # Copies file from action repository to the filesystem path `/` of the container
