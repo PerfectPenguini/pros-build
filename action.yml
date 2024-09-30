@@ -10,6 +10,12 @@ inputs:
     default: '.'
 runs:
   using: 'docker'
+  steps:
+    - uses: actions/setup-python@v5
+    with:
+      python-version: '3.9'
+      cache: 'pip' # caching pip dependencies
+    - run: pip install pros-cli
   image: 'Dockerfile'
   args: 
     - ${{ inputs.path }}
